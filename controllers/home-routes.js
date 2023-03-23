@@ -3,17 +3,27 @@ const withAuth = require('../utils/auth');
 const { Category, User } = require('../models');
 
 // GET route for the home page
-router.get('/', async (req, res) => {
+router.get('/home', (req, res) => {
     try {
-        // console.log('HOME');
+        console.log('HOME');
         res.render('home', {
-            // recipeList,
-            loggedIn: req.session.loggedIn
         });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
       }
+});
+
+// GET route for the home page
+router.get('/dashboard', (req, res) => {
+  try {
+      console.log('HOME');
+      res.render('dashboard', {
+      });
+  } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
 });
 
 router.get('/login', (req, res) => {
