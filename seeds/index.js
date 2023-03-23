@@ -2,7 +2,7 @@ const seedRecipes = require('./recipes-seeds.json');
 const seedCategory = require('./category-seeds.json');
 const seedStyle = require('./style-seeds.json');
 const userData = require('./userData.json');
-const { User, Recipes, Category, Style} = require('../models');
+const { User, Category} = require('../models');
 const sequelize = require('../config/connection');
 
 
