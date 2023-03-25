@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
     try {
         console.log('HOME');
         res.render('home', {
+          loggedIn: req.session.loggedIn
         });
     } catch (err) {
         console.log(err);
@@ -19,6 +20,7 @@ router.get('/dashboard', withAuth, (req, res) => {
   try {
       console.log('HOME');
       res.render('dashboard', {
+        loggedIn: req.session.loggedIn
       });
   } catch (err) {
       console.log(err);
