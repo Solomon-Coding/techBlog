@@ -4,7 +4,7 @@ require('dotenv').config();
 // route to create/add a recipes using async/await
 router.post('/', async (req, res) => {
   try { 
-    const recipesData = await Recipes.create({
+    const recipesData = await Posts.create({
     name: req.body.name,
     author: req.body.author,
     instructions: req.body.instructions,

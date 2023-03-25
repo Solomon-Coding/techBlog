@@ -1,15 +1,15 @@
 const User = require('./User');
-const Post = require('./Post');
+const Posts = require('./Posts');
 
   // Every category can refer to many recipe's
-  User.hasMany(Post,
+  User.hasMany(Posts,
     {
-      foreignKey: 'post_id'
+      foreignKey: 'user_id'
     }
   );
 
   // Every recipe falls within a particular food style
-Post.belongsTo(User,
+Posts.belongsTo(User,
   {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
@@ -18,5 +18,5 @@ Post.belongsTo(User,
 
 module.exports = {
     User,
-    Post,
+    Posts,
   };

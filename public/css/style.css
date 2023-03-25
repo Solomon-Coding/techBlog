@@ -3,12 +3,14 @@
 
 }
 
+/* GENERAL */
 :root {
 --color1: white;
 --color2: #3d519e;
 --color3: black;
 }
 
+/* LOGIN PAGE */
 .alignment {
     display: flex;
     flex-direction: column;

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
-const { Category, User } = require('../models');
+const { Posts, User } = require('../models');
 
 // GET route for the home page
 router.get('/', (req, res) => {
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 });
 
 // GET route for the home page
-router.get('/dashboard', (req, res) => {
+router.get('/dashboard', withAuth, (req, res) => {
   try {
       console.log('HOME');
       res.render('dashboard', {
