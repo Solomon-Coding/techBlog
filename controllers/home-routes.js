@@ -3,7 +3,7 @@ const withAuth = require('../utils/auth');
 const { Category, User } = require('../models');
 
 // GET route for the home page
-router.get('/home', (req, res) => {
+router.get('/', (req, res) => {
     try {
         console.log('HOME');
         res.render('home', {

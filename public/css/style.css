@@ -6,4 +6,26 @@
 :root {
 --color1: white;
 --color2: #3d519e;
+--color3: black;
+}
+
+.alignment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.alignment label {
+    color: var(--color3);
+}
+
+.page-title {
+    color: var(--color3);
+    padding-bottom: 5%;
+}
+
+@media (max-width: 992px) {
+    .navLeft {
+        padding-left: 5%;
+    }
 }
