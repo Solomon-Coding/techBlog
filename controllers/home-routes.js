@@ -40,13 +40,39 @@ router.get('/dashboard', withAuth, async (req, res) => {
         id: req.session.user_id
       }
     })
-    console.log(req.session)
+    // console.log(req.session)
     const postsList = postsData.map((posts) =>
     posts.get({plain: true})
     );
       console.log('DASHBOARD');
       res.render('dashboard', {
         postsList,
+        loggedIn: req.session.loggedIn
+      });
+  } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+});
+
+// GET route for adding a post
+router.get('/dashboard/add', withAuth, (req, res) => {
+  try {    
+      console.log('ADD POST');
+      res.render('add', {
+        loggedIn: req.session.loggedIn
+      });
+  } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+});
+
+// GET route for adding a post
+router.get('/dashboard/edit/:id', withAuth, (req, res) => {
+  try {    
+      console.log('EDIT POST');
+      res.render('edit', {
         loggedIn: req.session.loggedIn
       });
   } catch (err) {

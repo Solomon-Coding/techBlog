@@ -1,63 +1,29 @@
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 <div class=" text-center pt-2  mt-5 bg-light">
   <h1>My Recipes</h1>
   <hr>
   <div class="d-flex row  justify-content-center m-2 rep-list ">
     <ul id="postsList">
       {{#each postsList as |post|}}
-      <li id="individualRecipe" type="button" style="padding-bottom: 5%;">
+      <li type="button" style="padding-bottom: 5%;">
         <div class="card" style="text-align:left">
           <div class="card-header" style="display: flex; justify-content: space-between;">
             <div>
               {{post.title}}
+                            <a class="nav-link" href="/dashboard/edit"></a>
             </div>
-            {{!-- <div>
-              Posted by {{post.user.name}} on {{post.date}}
-            </div> --}}
           </div>
-          {{!-- <div class="card-body">
-            <blockquote class="blockquote mb-0">
-              <p>{{post.content}}</p>
-            </blockquote>
-          </div> --}}
         </div>
       </li>
       {{/each}}
-      <li type="button" data-toggle="modal" data-target="#exampleModalCenter">
+      {{!-- <li class="nav-link" type="button" style="padding-bottom: 5%;">
+        <a href="/add"></a> --}}
+
+      <li class="nav-item active" style="list-style-type: none;">
+        
         <div class="card" style="text-align:center">
           <div class="card-header"  >
-            <div >
-              + New Post
+            <div>
+              <a class="nav-link" href="/dashboard/add">+ ADD POST</a>
             </div>
           </div>
         </div>
