@@ -1,7 +1,5 @@
-<div class=" text-center pt-2  mt-5 bg-light">
-  <h1>My Recipes</h1>
-  <hr>
-  <div class="d-flex row  justify-content-center m-2 rep-list ">
+<div class=" text-center pt-2  mt-5">
+  <div class="d-flex row  justify-content-center m-2 rep-list">
     <ul id="postsList">
       {{#each postsList as |post|}}
       <li type="button" style="padding-bottom: 5%;">
@@ -15,9 +13,6 @@
         </div>
       </li>
       {{/each}}
-      {{!-- <li class="nav-link" type="button" style="padding-bottom: 5%;">
-        <a href="/add"></a> --}}
-
       <li class="nav-item active" style="list-style-type: none;">
         
         <div class="card" style="text-align:center">
