@@ -10,6 +10,11 @@
 --color3: black;
 }
 
+/* MAIN PAGE */
+body { 
+    padding-top: 70px; 
+}
+
 /* LOGIN PAGE */
 .alignment {
     display: flex;
