@@ -1,9 +1,36 @@
-      {{#if loggedIn}}
-      <li class="nav-item active">
-        <a class="nav-link logout-bt" id="logout" href="/">Log Out</a>
+<div class=" text-center pt-2  mt-5 bg-light">
+  <h1>My Recipes</h1>
+  <hr>
+  <div class="d-flex row  justify-content-center m-2 rep-list ">
+    <ul id="postsList">
+      {{#each postsList as |post|}}
+      <li id="individualRecipe" type="button" style="padding-bottom: 5%;">
+        <div class="card" style="text-align:left">
+          <div class="card-header" style="display: flex; justify-content: space-between;">
+            <div>
+              {{post.title}}
+            </div>
+            {{!-- <div>
+              Posted by {{post.user.name}} on {{post.date}}
+            </div> --}}
+          </div>
+          {{!-- <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>{{post.content}}</p>
+            </blockquote>
+          </div> --}}
+        </div>
       </li>
-      {{else}}
-      <li class="nav-item active">
-        <a class="nav-link login-bt" id="login" href="/login">Log In</a>
+      {{/each}}
+      <li id="individualRecipe" type="button" style="padding-bottom: 5%;">
+        <div class="card" style="text-align:center">
+          <div class="card-header"  >
+            <div>
+              + New Post
+            </div>
+          </div>
+        </div>
       </li>
-      {{/if}}
+    </ul>
+  </div>
+</div>

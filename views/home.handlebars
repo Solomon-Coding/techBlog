@@ -1,3 +1,27 @@
-<div>
-  WORDS HOME
+<div class=" text-center pt-2  mt-5 bg-light">
+  <h1>My Recipes</h1>
+  <hr>
+  <div class="d-flex row  justify-content-center m-2 rep-list ">
+    <ul id="postsList">
+      {{#each postsList as |post|}}
+      <li id="individualRecipe" type="hidden" style="padding-bottom: 5%; list-style-type: none;">
+        <div class="card" style="text-align:left">
+          <div class="card-header" style="display: flex; justify-content: space-between;">
+            <div>
+              {{post.title}}
+            </div>
+            <div>
+              Posted by {{post.user.name}} on {{post.date}}
+            </div>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>{{post.content}}</p>
+            </blockquote>
+          </div>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
 </div>

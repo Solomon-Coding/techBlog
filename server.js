@@ -15,7 +15,10 @@ const hbs = exphbs.create({ helpers });
 
 const sess = {
     secret: process.env.SESS_SECRET || 'Super secret secret',
-    cookie: {},
+    cookie: {
+        // Expires after 15 min
+        expires: 900000
+    },
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
