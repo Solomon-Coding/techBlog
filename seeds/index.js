@@ -1,8 +1,6 @@
-const seedRecipes = require('./recipes-seeds.json');
-const seedCategory = require('./category-seeds.json');
-const seedStyle = require('./style-seeds.json');
+const postsData = require('./postsData.json');
 const userData = require('./userData.json');
-const { User, Recipes, Category, Style} = require('../models');
+const { User, Posts} = require('../models');
 const sequelize = require('../config/connection');
 
 
@@ -16,23 +14,11 @@ const seedAll = async () => {
   });
   console.log('\n----- USERS SEEDED -----\n');
 
-  await Category.bulkCreate(seedCategory, {
+  await Posts.bulkCreate(postsData, {
     individualHooks: true,
     returning: true,
   });
-  console.log('\n----- CATEGORIES SEEDED -----\n');
-
-  await Style.bulkCreate(seedStyle, {
-    individualHooks: true,
-    returning: true,
-  });
-  console.log('\n----- STYLES SEEDED -----\n');
-
-  await Recipes.bulkCreate(seedRecipes, {
-    individualHooks: true,
-    returning: true,
-  });
-  console.log('\n----- RECIPES SEEDED -----\n');
+  console.log('\n----- POSTS SEEDED -----\n');
 
   process.exit(0);
 };

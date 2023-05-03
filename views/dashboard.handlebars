@@ -1,0 +1,28 @@
+<div class=" text-center pt-2  mt-5">
+  <div class="d-flex row  justify-content-center m-2 rep-list">
+    <ul id="postsList">
+      {{#each postsList as |post|}}
+      <li type="button" style="padding-bottom: 5%;">
+        <div class="card" style="text-align:left">
+          <div class="card-header" style="display: flex; justify-content: space-between;">
+            <div>
+              {{post.title}}
+                <a class="nav-link" href="/dashboard/edit"></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      {{/each}}
+      <li class="nav-item active" style="list-style-type: none;">
+        
+        <div class="card" style="text-align:center">
+          <div class="card-header"  >
+            <div>
+              <a class="nav-link" href="/dashboard/add">+ ADD POST</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

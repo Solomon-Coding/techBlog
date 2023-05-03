@@ -1,22 +1,25 @@
-<div>
-  <div class='row' style="background-color: rgb(132, 75, 9);">
-
-    <div class="col-2 vh-100" style=" background-color: rgb(241, 186, 103);">
-      <div class=" mt-5  d-flex row g-2" style="padding-left:10%;">
-        {{!-- <button class="view-recipes" type="button">My recipes</button> --}}
-        <button id="view-recipes" type="button">My recipes</button>
-
-        {{!-- <button>Add recipes</button> --}}
-      </div>
-
-    </div>
-
-
-    <div class=" text-center pt-2  m-auto text-light  recipes ">
-      <h1 class='logo'>HOMECOOKED</h1>
-    </div>
+<div class=" text-center pt-2  mt-5 bg-light">
+  <div class="d-flex row  justify-content-center m-2 rep-list ">
+    <ul id="postsList">
+      {{#each postsList as |post|}}
+      <li id="individualRecipe" type="button" style="padding-bottom: 5%;">
+        <div class="card" style="text-align:left">
+          <div class="card-header" style="display: flex; justify-content: space-between;">
+            <div>
+              {{post.title}}
+            </div>
+            <div>
+              Posted by {{post.user.name}} on {{post.date}}
+            </div>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>{{post.content}}</p>
+            </blockquote>
+          </div>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
   </div>
 </div>
-</div>
-
-<script src="/js/btnRoutes.js"></script>

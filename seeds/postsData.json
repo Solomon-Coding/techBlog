@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Why MVC is so important",
+    "content": "MVC allows developers to maintain a true separation of concerns, devising their code between Model layer for data, their View layer for design, and the Controller layer for application logic.",
+    "date":"1999-02-28",
+    "user_id": "1"
+  },
+  {
+    "title": "Words",
+    "content": "Losts oqerafs.ckvn qe;f/vk nq'/eaf,d cn;/aemfad",
+    "date": "2008-11-11",
+    "user_id": "2"
+  }
+]
